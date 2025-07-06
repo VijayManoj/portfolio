@@ -16,5 +16,4 @@ This is my personal portfolio website built using **React.js** and **Tailwind CS
 - **Tailwind CSS** – Utility-first CSS framework for fast UI development
 - **Vite** or **Create React App** – (whichever you used for bootstrapping)
 
-## 📁 Folder Structure
 
