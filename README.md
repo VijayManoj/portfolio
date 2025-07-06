@@ -14,6 +14,6 @@ This is my personal portfolio website built using **React.js** and **Tailwind CS
 
 - **React.js** – Front-end JavaScript library for building user interfaces
 - **Tailwind CSS** – Utility-first CSS framework for fast UI development
-- **Vite** or **Create React App** – (whichever you used for bootstrapping)
+- **Create React App** – (whichever you used for bootstrapping)
 
 
