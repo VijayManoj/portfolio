@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
 
 const experiences = [
   {
@@ -10,7 +11,8 @@ const experiences = [
       "Developed and maintained RESTful APIs using Spring Boot, enabling seamless integration between microservices and front-end applications",
       "Collaborated in an Agile environment to deliver high-quality backend features aligned with business requirements.",
       "Applied best practices in code quality, including unit testing, integration testing, and code reviews.",
-      "Participated in DevOps activities, such as configuring CI/CD pipelines, automating deployments, and monitoring application performance using tools like GitHub Actions and Docker."
+      "Participated in DevOps activities, such as configuring CI/CD pipelines, automating deployments, and monitoring application performance using tools like GitHub Actions and Docker.",
+      "Strengthened code quality and coverage by writing effective unit tests aligned with best practices."
     ]
   },
   {
@@ -41,35 +43,36 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-12 bg-gray-900 text-white">
-  <motion.div
-    className="container mx-auto px-4"
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-  >
-    <h2 className="text-3xl sm:text-4xl font-bold text-blue-400 text-center">Experience</h2>
-    <div className="mt-8 flex flex-col gap-6">
-  {experiences.map((exp, index) => (
-    <motion.div
-      key={index}
-      className="bg-gray-800 p-4 sm:p-5 md:p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full"
-    >
-      <h3 className="text-xl sm:text-2xl font-semibold text-blue-300">{exp.role}</h3>
-      <p className="text-gray-400 text-sm sm:text-base mt-1">
-        {exp.company} | {exp.duration} | {exp.location}
-      </p>
-      <ul className="mt-3 list-disc list-inside space-y-1 text-gray-300 text-sm sm:text-base">
-        {exp.responsibilities.map((task, i) => (
-          <li key={i}>{task}</li>
-        ))}
-      </ul>
-    </motion.div>
-  ))}
-</div>
-  </motion.div>
-</section>
-
+    <section id="experience" className="section">
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <SectionHeader title="Experience" subtitle="Roles and responsibilities across organizations" />
+        <div className="mt-8 grid grid-cols-1 gap-6">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              className="glass p-6 md:p-8 rounded-xl shadow-lg"
+              whileHover={{ scale: 1.01 }}
+            >
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-300">{exp.role}</h3>
+              <p className="text-gray-400 text-sm md:text-base mt-1">
+                {exp.company} | {exp.duration} | {exp.location}
+              </p>
+              <ul className="mt-4 list-disc list-inside space-y-2 text-gray-200 text-sm md:text-base">
+                {exp.responsibilities.map((task, i) => (
+                  <li key={i}>{task}</li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </section>
   );
 };
 

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
 
 const skills = [
   { category: "Programming Languages", items: ["Java", "Python", "JavaScript"] },
@@ -10,23 +11,24 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-gray-900 text-white">
-      <motion.div 
-        className="container mx-auto"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+    <section id="skills" className="section">
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
       >
-        <h2 className="text-4xl font-bold text-blue-400 text-center">Skills</h2>
+        <SectionHeader title="Skills" subtitle="Technologies and tools I work with" />
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
-            <motion.div 
-              key={index} 
-              className="bg-gray-800 p-6 rounded-lg shadow-lg"
-              whileHover={{ scale: 1.05 }}
+            <motion.div
+              key={index}
+              className="glass p-6 rounded-xl shadow-lg"
+              whileHover={{ scale: 1.02 }}
             >
-              <h3 className="text-2xl font-semibold text-blue-300">{skill.category}</h3>
-              <ul className="mt-4 list-disc list-inside space-y-2 text-gray-300">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-300">{skill.category}</h3>
+              <ul className="mt-4 list-disc list-inside space-y-2 text-gray-200">
                 {skill.items.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}

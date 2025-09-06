@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
 
 const projects = [
   {
@@ -35,45 +36,46 @@ const projects = [
 
 const Projects = () => {
   return (
-   <section id="projects" className="py-12 bg-gray-800 text-white">
-  <motion.div 
-    className="container mx-auto px-4"
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-  >
-    <h2 className="text-3xl sm:text-4xl font-bold text-blue-400 text-center">Projects</h2>
-    <div className="mt-8 flex flex-col gap-6">
-      {projects.map((project, index) => (
-        <motion.div 
-          key={index} 
-          className="bg-gray-900 p-4 sm:p-5 md:p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full"
-        >
-          <h3 className="text-xl sm:text-2xl font-semibold text-blue-300">{project.name}</h3>
-          <p className="text-gray-400 text-sm sm:text-base mt-1">
-            {project.duration} | <span className="italic">{project.technologies}</span>
-          </p>
-          <ul className="mt-3 list-disc list-inside space-y-1 text-gray-300 text-sm sm:text-base">
-            {project.description.map((point, i) => (
-              <li key={i}>{point}</li>
-            ))}
-          </ul>
-          <div className="mt-3">
-            <a 
-              href={project.link} 
-              className="text-blue-400 hover:underline text-sm sm:text-base"
-              target="_blank" 
-              rel="noopener noreferrer"
+    <section id="projects" className="section">
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <SectionHeader title="Projects" subtitle="Selected work and experiments" />
+        <div className="mt-8 grid grid-cols-1 gap-6">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="glass p-6 rounded-xl shadow-lg"
+              whileHover={{ scale: 1.01 }}
             >
-              View Project
-            </a>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </motion.div>
-</section>
-
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-300">{project.name}</h3>
+              <p className="text-gray-400 text-sm md:text-base mt-1">
+                {project.duration} | <span className="italic">{project.technologies}</span>
+              </p>
+              <ul className="mt-3 list-disc list-inside space-y-2 text-gray-200 text-sm md:text-base">
+                {project.description.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+              <div className="mt-4">
+                <a
+                  href={project.link}
+                  className="inline-flex items-center gap-2 text-brand-400 hover:text-white transition-colors text-sm md:text-base"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project →
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </section>
   );
 };
 
