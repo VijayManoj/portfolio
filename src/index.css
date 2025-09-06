@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Base styles */
+html, body, #root {
+	height: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	@apply bg-gray-950 text-white antialiased;
+	background-image: radial-gradient(ellipse at top, rgba(99,102,241,0.08), rgba(0,0,0,0) 60%),
+		radial-gradient(ellipse at bottom, rgba(236,72,153,0.06), rgba(0,0,0,0) 60%);
+	background-attachment: fixed;
+}
+
+::selection {
+	background: rgba(99, 102, 241, 0.3);
+}
+
+/* Reusable section spacing */
+.section {
+	@apply py-20 md:py-28;
+}
+
+.glass {
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.06) 0%,
+		rgba(255, 255, 255, 0.03) 100%
+	);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
