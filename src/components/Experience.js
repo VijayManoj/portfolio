@@ -76,4 +76,5 @@ const Experience = () => {
   );
 };
 
+export { experiences };
 export default Experience;
