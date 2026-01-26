@@ -5,6 +5,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Awards from "./components/achievements";
 
 import { motion } from "framer-motion";
 
@@ -29,6 +30,7 @@ function App() {
         <Home />
         <About />
         <Experience />
+        <Awards /> {/* ADD THIS LINE */}
         <Skills />
         <Projects />
         <Contact />

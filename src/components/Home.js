@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { FaArrowDown } from "react-icons/fa";
+import { calculateExperience } from "./experienceCal";
+import { experiences } from "./Experience";
 
 const Home = () => {
+  const yearsOfExperience = calculateExperience(experiences);
+
   return (
     <section id="home" className="section min-h-screen flex items-center relative pt-24">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-white/5 to-transparent" aria-hidden />
@@ -23,7 +27,7 @@ const Home = () => {
           </p>
           <div className="mt-6 max-w-3xl mx-auto glass rounded-xl p-4 sm:p-5 border border-white/10">
             <p className="text-[15px] sm:text-base md:text-lg leading-relaxed text-gray-200">
-              <span className="font-semibold text-white">Backend-focused Software Engineer</span> with <span className="text-brand-400 font-semibold">2+ years</span> of experience in <span className="bg-gradient-to-r from-brand-400 to-fuchsia-400 bg-clip-text text-transparent font-semibold">Java</span>, <span className="bg-gradient-to-r from-fuchsia-400 to-cyan-300 bg-clip-text text-transparent font-semibold">Spring Boot</span>, <span className="text-brand-300 font-medium">REST APIs</span>, and <span className="text-brand-300 font-medium">microservices</span>. Skilled in <span className="text-brand-300 font-medium">CI/CD</span>, <span className="text-brand-300 font-medium">Docker</span>, <span className="text-brand-300 font-medium">unit testing</span>, and managing <span className="text-brand-300 font-medium">Kubernetes</span> pods/clusters to ensure reliable deployments. Proven track record of building <span className="text-brand-300 font-medium">scalable backend systems</span> and automating processes to improve efficiency.
+              <span className="font-semibold text-white">Backend-focused Software Engineer</span> with <span className="text-brand-400 font-semibold">{yearsOfExperience}+ years</span> of experience in <span className="bg-gradient-to-r from-brand-400 to-fuchsia-400 bg-clip-text text-transparent font-semibold">Java</span>, <span className="bg-gradient-to-r from-fuchsia-400 to-cyan-300 bg-clip-text text-transparent font-semibold">Spring Boot</span>, <span className="text-brand-300 font-medium">REST APIs</span>, and <span className="text-brand-300 font-medium">microservices</span>. Skilled in <span className="text-brand-300 font-medium">CI/CD</span>, <span className="text-brand-300 font-medium">Docker</span>, <span className="text-brand-300 font-medium">unit testing</span>, and managing <span className="text-brand-300 font-medium">Kubernetes</span> pods/clusters to ensure reliable deployments. Proven track record of building <span className="text-brand-300 font-medium">scalable backend systems</span> and automating processes to improve efficiency.
             </p>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
