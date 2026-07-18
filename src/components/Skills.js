@@ -5,7 +5,7 @@ const skills = [
   { category: "Programming Languages", items: ["Java", "Python", "JavaScript"] },
   { category: "Databases", items: ["SQL", "PostgreSQL", "MongoDB"] },
   { category: "Frameworks/Libraries", items: ["Spring Boot", "REST API", "Microservices", "React JS", "Thymeleaf", "Spring MVC","Splunk"] },
-  { category: "Tools", items: ["AWS", "Eclipse", "IntellJ","Visual Studio Code", "GitHub", "Postman", "Apache Tomcat","JIRA"] },
+  { category: "Tools", items: ["IntellJ","Eclipse","Visual Studio Code", "GitHub", "Postman", "Splunk","Grafana","Dynatrace","JIRA"] },
   { category: "Testing Tools", items: ["Robot Framework", "Selenium", "Appium"] }
 ];
 
