@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
-import { FaTrophy, FaStar, FaMedal } from "react-icons/fa";
+import { FaTrophy, FaStar, FaMedal,FaAward } from "react-icons/fa";
 
 const awards = [
   {
@@ -25,6 +25,13 @@ const awards = [
     year: "2025",
     description: "Consistently delivered high-quality, production-ready code from Day One",
     icon: FaMedal,
+    color: "text-blue-400"
+  },{
+     title: "Leadership",
+    company: "OPTUM",
+    year: "2025",
+    description: " Played a critical role in delivering the PSMS Feature through strong ownership and accountability",
+    icon: FaAward,
     color: "text-blue-400"
   }
 ];

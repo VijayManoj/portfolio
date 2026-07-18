@@ -4,15 +4,18 @@ import SectionHeader from "./SectionHeader";
 const experiences = [
   {
     company: "OPTUM",
-    role:"Software Engineer",
+    role:"Senior Software Engineer",
     duration: "Apr 2025 – Present",
     location: "Hyderabad, Telangana",
     responsibilities: [
-      "Developed and maintained RESTful APIs using Spring Boot, enabling seamless integration between microservices and front-end applications",
-      "Collaborated in an Agile environment to deliver high-quality backend features aligned with business requirements.",
-      "Applied best practices in code quality, including unit testing, integration testing, and code reviews.",
-      "Participated in DevOps activities, such as configuring CI/CD pipelines, automating deployments, and monitoring application performance using tools like GitHub Actions and Docker.",
-      "Strengthened code quality and coverage by writing effective unit tests aligned with best practices."
+      "Driving API design and delivery within the team and coordinating with parallel teams to ensure consistency and seamless integration across shared services. Acted as the team’s technical representative in cross-functional discussions with external teams to define feature requirements, resolve dependencies, and align on scalable solutions within Optum’s enterprise platform.",
+      "Designed, developed, and maintained high-availability Spring Boot microservices supporting mission-critical workflows, ensuring resilient and fault-tolerant service operation in production environments.",
+      "Optimized database queries and service interactions, reducing API response latency and enhancing overall throughput and reliability.",
+      "Contributed to CI/CD automation efforts using GitHub Actions, supporting build, test, and deployment workflows to improve release consistency and reduce manual intervention.",
+      "Collaborated closely with business stakeholders and QA teams to deliver compliant, performance-tested solutions aligned with global healthcare standards.",
+      "Participated in production deployments, coordinating release activities, validating deployment health, and ensuring smooth rollout of services in enterprise production environments.",
+      "Participated in DevOps activities including deployment automation, environment configuration, and application monitoring using tools such as Splunk, Grafana, Dynatrace and GitHub Actions.",
+      "Conducted technical code reviews, promoting clean architecture principles and improving test coverage, which contributed to a reduction in production defects."
     ]
   },
   {
